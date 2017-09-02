@@ -22,7 +22,7 @@ Basic ES6 (EMCA2015) example using ES6 Syntax and Babel to convert it to regular
 ## Event Listeners
 In this workshop event listeners are setup. The example using vanilla JavaScript is used first and then commented out:
 ```
-mounted() { Old method using querySelector and ids
+mounted() { //Old method using querySelector and ids
 			 	document.querySelector('#button').addEventListener('click', () => {
 			 		let name = document.querySelector('#input');
 			 		app.names.push(name.value);
