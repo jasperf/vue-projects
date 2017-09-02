@@ -13,8 +13,12 @@
 	<ul>
 		<li v-for="name in names" v-text="name"></li>
 	</ul>
-	<input id="input" type="text">
-	<button id="button">Add name</button>
+	<!-- <input id="input" type="text"> -->
+	<!-- <button id="button">Add name</button> Old way using vanilla JS-->
+	<p>We can also use the v-on as an event listener and this will allow us to use a way
+	shorter syntax to work with changes based on events like clicks. Button here below wil use the v-on directive</p>
+	<input id="input" type="text" v-model="newName">
+	<button v-on:click="addName">Add Name</button>
 </div>
 
 
@@ -23,17 +27,24 @@
 		var app = new Vue({ // new Vue instance inside global scope of app
 			el: '#root', // root element
 			data: { // data
+				newName: '',
 				names: ['Joe', 'Mary', 'John'] // array with elements
 				//try app.names.push('Jeremiah')
 			},
+			methods: { // all methods or functions should be added here
+				addName() { // ES6 Syntax without function ()
+					//alert('adding name');
+					this.names.push(this.newName);
+				}
+			},
 
-			mounted() {
-				document.querySelector('#button').addEventListener('click', () => {
-					let name = document.querySelector('#input');
-					app.names.push(name.value);
-					name.value = ''; //empty the field
-				});
-			}
+			// mounted() { Old method using querySelector and ids
+			// 	document.querySelector('#button').addEventListener('click', () => {
+			// 		let name = document.querySelector('#input');
+			// 		app.names.push(name.value);
+			// 		name.value = ''; //empty the field
+			// 	});
+			// }
 		});
 	</script>
 
