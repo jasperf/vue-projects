@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="root">
+	<ul>
+		<li v-for="name in names">{{ name }}</li>
+	</ul>
+	<p>Or you use v-text instead of the moustache curly braces </p>
+	<ul>
+		<li v-for="name in names" v-text="name"></li>
+	</ul>
+</div>
+
+
+	<script src="https://unpkg.com/vue"></script>
+	<script> 
+		var app = new Vue({ // new Vue instance inside global scope of app
+			el: '#root', // root element
+			data: { // data
+				names: ['Joe', 'Mary', 'John'] // array with elements
+				//try app.names.push('Jeremiah')
+			}
+		});
+	</script>
+
+</body>
+</html>
