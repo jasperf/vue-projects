@@ -15,3 +15,6 @@ Basic Axios - Promised Based HTTP Client - Ajax call loading Json from Laravel R
 
 ## Basic Databinding
 Showing how you can reactively bind data to an input field using v-model as well as echoing the data using the moustache ```{{}}``` syntax.
+
+## ES6
+Basic ES6 (EMCA2015) example using ES6 Syntax and Babel to convert it to regular JavaScript which use can use cross-browser.
