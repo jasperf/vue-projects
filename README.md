@@ -28,4 +28,4 @@ document.querySelector('#button').addEventListener('click', () => {
 	name.value = ''; //empty the field
 });
 ```
-This to show how event listeners are set up in Vue JS with a lot less code and way easier then using JavaScript or jQuery.
+This to show how event listeners are set up in Vue JS with a lot less code and way easier then using JavaScript or jQuery. The event listener is set up using the directive v-on:click . With it a method can be bound to it.
