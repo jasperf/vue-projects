@@ -13,6 +13,8 @@
 	<ul>
 		<li v-for="name in names" v-text="name"></li>
 	</ul>
+	<input id="input" type="text">
+	<button id="button">Add name</button>
 </div>
 
 
@@ -23,6 +25,14 @@
 			data: { // data
 				names: ['Joe', 'Mary', 'John'] // array with elements
 				//try app.names.push('Jeremiah')
+			},
+
+			mounted() {
+				document.querySelector('#button').addEventListener('click', () => {
+					let name = document.querySelector('#input');
+					app.names.push(name.value);
+					name.value = ''; //empty the field
+				});
 			}
 		});
 	</script>
