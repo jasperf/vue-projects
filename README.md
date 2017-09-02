@@ -16,6 +16,8 @@ Basic Axios - Promised Based HTTP Client - Ajax call loading Json from Laravel R
 ## Basic Databinding
 Showing how you can reactively bind data to an input field using v-model as well as echoing the data using the moustache ```{{}}``` syntax.
 
+This type of data binding using ```v-model``` is for input fields and text areas only. For binding of classes and styles ```v-bind``` is used.
+
 ## ES6
 Basic ES6 (EMCA2015) example using ES6 Syntax and Babel to convert it to regular JavaScript which use can use cross-browser.
 
