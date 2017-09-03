@@ -1,4 +1,4 @@
-# VueJS Projects
+# VueJS Basics
 
 In this repository I put all the Vue projects I worked on using Laracasts.com and other workshops on the web to learn Vue.js .  Here is the list of the current projects I am working on and those that are done:
 
@@ -12,6 +12,9 @@ In this repository I put all the Vue projects I worked on using Laracasts.com an
 - Event Listeners: v-on
 - Twitter
 - Lists:v-for
+
+## Attribute and Class Binding - v-bind
+In this workshop work with ```v-bind```. We use it to change the class and attributes of html tags to create new state.
 
 ## Axios
 Basic Axios - Promised Based HTTP Client - Ajax call loading Json from Laravel Route with array. Vue is used to add the data or skills in this case to the DOM using an empty array. Axios fills the array with data from the Larvel Route skills.
