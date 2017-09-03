@@ -2,9 +2,13 @@
 
 In this repository I put all the Vue projects I worked on using Laracasts.com and other workshops on the web to learn Vue.js .  Here is the list of the current projects I am working on and those that are done:
 
-- Axios
+- Attribute and Class Binding - v-bind
+- Axios - Promised Based HTTP and VueJS
 - Basic Data Binding: v-model
-- ES6 & Babel
+- Component with message
+- Components 101
+- Computed Properties & Caching
+- ES6 & Babel - ES6 in VueJS
 - Event Listeners: v-on
 - Twitter
 - Lists:v-for
