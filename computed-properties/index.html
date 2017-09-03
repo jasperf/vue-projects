@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="root">
+	<!-- <h1 v-text="new Date()"></h1> -->
+	<h1>
+		<!-- {{message}} -->
+		<!--  {{message.split('').reverse().join('')}} -->
+		<!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split -->
+		{{reversedMessage}}
+	</h1>
+</div>
+
+
+	<script src="https://unpkg.com/vue"></script>
+	<script> 
+		var app = new Vue({ 
+			el: '#root',
+			data: { 
+				message: 'Hello World'
+			},
+
+			computed:{
+				reversedMessage() {
+					return this.message.split('').reverse('').join('');
+				}
+			}
+		});
+	</script>
+
+</body>
+</html>

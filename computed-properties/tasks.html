@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="root">
+	<h2>All Tasks</h2>
+	<ul>
+<!-- <li v-for="task in tasks" v-if="task.completed" v-text="task.description"></li> -->
+		<li v-for="task in tasks" v-text="task.description"></li>
+	</ul>
+	<h2>Incomplete Tasks</h2>
+	<ul>
+<!-- 		<li v-for="task in tasks" v-if="task.completed" v-text="task.description"></li> -->
+		<li v-for="task in incompleteTasks" v-text="task.description"></li>
+	</ul>
+</div>
+
+
+	<script src="https://unpkg.com/vue"></script>
+	<script> 
+		var app = new Vue({ 
+			el: '#root',
+			data: { 
+				tasks: [
+				{description: 'Go to the store', completed: true},
+				{description: 'Finish workshop', completed: false},
+				{description: 'Send out document', completed: false},
+				{description: 'Order new passport', completed: true},
+				{description: 'Discuss SaaS with partner', completed: true}
+				]
+			},
+
+			computed:{ // computed properties are cached based on their dependencies
+								// In comparison, a method invocation will always run the function whenever a re-render happens.
+				incompleteTasks() {
+					return this.tasks.filter(task => ! task.completed); 
+					// ES6 syntax with function without curly braces and arrow
+					// Here old style:
+					// this.tasks.filter(function (task) {
+					// return ! task.completed
+					// })
+					// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+				} 
+				// You can now try app.tasks[0].completed = false; from the console
+			}
+		});
+	</script>
+
+</body>
+</html>
