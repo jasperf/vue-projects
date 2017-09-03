@@ -33,7 +33,7 @@ Basic ES6 (EMCA2015) example using ES6 Syntax and Babel to convert it to regular
     "build": "babel src -d dist"
   }
   ```
-  [Bable CLI](https://babeljs.io/docs/setup/#installation) setup is used to setup Babel for this project
+  [Babel CLI](https://babeljs.io/docs/setup/#installation) setup is used to setup Babel for this project
 
 ## Event Listeners
 In this workshop event listeners are setup. The example using vanilla JavaScript is used first and then commented out:
