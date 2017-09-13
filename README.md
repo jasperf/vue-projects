@@ -8,7 +8,6 @@ In this repository I put all the Vue projects I worked on using Laracasts.com an
 - Component with message
 - Components 101
 - Computed Properties & Caching
-- ES6 & Babel - ES6 in VueJS
 - Event Listeners: v-on
 - Twitter
 - Lists:v-for
@@ -45,3 +44,9 @@ document.querySelector('#button').addEventListener('click', () => {
 });
 ```
 This to show how event listeners are set up in Vue JS with a lot less code and way easier then using JavaScript or jQuery. The event listener is set up using the directive ```v-on:click``` . With it a method can be bound to it.
+
+## Twitter
+
+Twitter Tweet field in progress
+
+## V-For and Lists
