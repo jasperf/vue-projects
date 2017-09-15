@@ -18,7 +18,38 @@ In this repository I put all the Vue projects I worked on using Laracasts.com an
 In this workshop work with ```v-bind```. We use it to change the class and attributes of html tags to create new state.
 
 ## Axios
-Basic Axios - Promised Based HTTP Client - Ajax call loading Json from Laravel Route with array. Vue is used to add the data or skills in this case to the DOM using an empty array. Axios fills the array with data from the Larvel Route skills.
+Basic Axios - Promised Based HTTP Client - Ajax call loading Json from Laravel Route with array. 
+
+Vue is used to add the data or skills in this case to the DOM using an empty array. In `resources/assets/js/app.js` we require bootstrap and view and then import our Vue component using:
+```
+Vue.component('example', require('./components/Example.vue')); 
+```
+
+The component does a basic `mounted` test.
+### Laravel Backend
+This demo uses Axios as part of a Laravel application So a full fledged Laravel setup is used here. Axios fills the array with data from the Larvel Route skills at `routes/web.php`:
+
+```
+Route::get('skills', function () {
+    return ['Laravel', 'Vue', 'PHP', 'JavaScript', 'Tooling'];
+});
+```
+
+`resources/viewswelcome.blade.php` loads the vue data using:
+
+```
+<body>
+        <div id="app">
+            <ul>
+                <li v-for="skill in skills">@{{skill}}</li>
+            </ul>
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="/js/app.js"" type="text/javascript" charset="utf-8" async defer></script>
+    </body>
+```
+
 
 ## Basic Databinding
 Showing how you can reactively bind data to an input field using v-model as well as echoing the data using the moustache ```{{}}``` syntax.
