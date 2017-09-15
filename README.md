@@ -25,7 +25,7 @@ Vue is used to add the data or skills in this case to the DOM using an empty arr
 Vue.component('example', require('./components/Example.vue')); 
 ```
 
-The component does a basic `mounted` test.
+The component does a basic `mounted` test loading some data and recording a succes mount in the console.
 ### Laravel Backend
 This demo uses Axios as part of a Laravel application So a full fledged Laravel setup is used here. Axios fills the array with data from the Larvel Route skills at `routes/web.php`:
 
