@@ -25,6 +25,7 @@ This type of data binding using ```v-model``` is for input fields and text areas
 
 ## Components with Message
 Working with a component here in more detail using the properties:prop, extended template details as well as a method to show or hide a message block. Directive used here to work with the method to hide the message is ```v-show```. Bulma is used here it being Jeffrey Way,'' favorite CSS framework.
+The `@click` used here is  a short version of `v-on:click` and you can add a method to be called. Also see (listening to events chapter at Vue)[https://vuejs.org/v2/guide/events.html#Listening-to-Events]
 
 ## Event Listeners
 In this workshop event listeners are setup. The example using vanilla JavaScript is used first and then commented out:
