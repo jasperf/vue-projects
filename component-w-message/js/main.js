@@ -13,7 +13,7 @@ Vue.component('message', {
 		<article class="message" v-show="isVisible">
 		  <div class="message-header">
 		    {{title}}
-		    // @click is  a short version of v-on:click and you can add a method to be called
+		    <!-- @click is  a short version of v-on:click and you can add a method to be called -->
 		    <button class="delete" @click="hideModal" aria-label="delete"></button>
 		  </div>
 		  <div class="message-body">
