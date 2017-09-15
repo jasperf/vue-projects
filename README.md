@@ -44,6 +44,18 @@ This to show how event listeners are set up in Vue JS with a lot less code and w
 Twitter Tweet field in progress
 
 ## V-For and Lists
+Wonderful basic example showing how you can use Vue's v-for loops. From within a component with a data function an array of data is loaded:
+```
+data: { // data
+                names: ['Joe', 'Mary', 'John'] // array with elements
+                //try app.names.push('Jeremiah')
+            }
+```
+This array is loaded onto the page using:
+```
+<li v-for="name in names">{{ name }}</li>
+```
+The `{{}}` moustache curly braces are used here again to echo the actual name from the for loop.
 
 ## Components within Components
 Basic example showing you how you can use html tags defined in one component and reuse those in the second component. Do remember that Vue wants you do a top bottom approach so components at the top depend on the ones following them. And a new Vue instance follows at the end
