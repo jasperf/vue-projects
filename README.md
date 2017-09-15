@@ -25,6 +25,7 @@ This type of data binding using ```v-model``` is for input fields and text areas
 
 ## Components with Message
 Working with a component here in more detail using the properties:prop, extended template details as well as a method to show or hide a message block. Directive used here to work with the method to hide the message is ```v-show```. Bulma is used here it being Jeffrey Way,'' favorite CSS framework.
+
 The `@click` used here is  a short version of `v-on:click` and you can add a method to be called. Also see [listening to events chapter at Vue](https://vuejs.org/v2/guide/events.html#Listening-to-Events)
 
 ## Event Listeners
@@ -43,3 +44,6 @@ This to show how event listeners are set up in Vue JS with a lot less code and w
 Twitter Tweet field in progress
 
 ## V-For and Lists
+
+## Components within Components
+Basic example showing you how you can use html tags defined in one component and reuse those in the second component. Do remember that Vue wants you do a top bottom approach so components at the top depend on the ones following them. And a new Vue instance follows at the end
