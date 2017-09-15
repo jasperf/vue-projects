@@ -50,7 +50,18 @@ Route::get('skills', function () {
     </body>
 ```
 
-
+### PHP Server
+You can run the app using Homestead of for a quick check the built in PHP server using:
+```
+jasper@/axios/public $ php -S localhost:8000
+PHP 7.1.5 Development Server started at Fri Sep 15 12:13:49 2017
+Listening on http://localhost:8000
+Document root is /Users/jasper/webdesign/vue-basics/axios/public
+Press Ctrl-C to quit.
+[Fri Sep 15 12:13:52 2017] ::1:58449 [200]: /
+[Fri Sep 15 12:13:52 2017] ::1:58454 [200]: /js/app.js
+[Fri Sep 15 12:13:55 2017] ::1:58463 [200]: /skills
+```
 ## Basic Databinding
 Showing how you can reactively bind data to an input field using v-model as well as echoing the data using the moustache ```{{}}``` syntax.
 
