@@ -5,8 +5,10 @@ In this repository I put all the Vue projects I worked on using Laracasts.com an
 - Attribute and Class Binding - v-bind
 - Axios - Promised Based HTTP and VueJS
 - Basic Data Binding: v-model
+- Component within Component
+- Component Modal
 - Component with message
-- Components 101
+- Components - 101
 - Computed Properties & Caching
 - Event Listeners: v-on
 - Twitter
