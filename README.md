@@ -35,7 +35,7 @@ Route::get('skills', function () {
 });
 ```
 
-`resources/viewswelcome.blade.php` loads the vue data using:
+`resources/views/welcome.blade.php` loads the vue data using:
 
 ```
 <body>
