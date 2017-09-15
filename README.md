@@ -58,4 +58,8 @@ This array is loaded onto the page using:
 The `{{}}` moustache curly braces are used here again to echo the actual name from the for loop.
 
 ## Components within Components
-Basic example showing you how you can use html tags defined in one component and reuse those in the second component. Do remember that Vue wants you do a top bottom approach so components at the top depend on the ones following them. And a new Vue instance follows at the end
+Basic example showing you how you can use html tags defined in one component:
+```
+<task v-for="task in tasks" :key="task.id">{{ task.task }}</task>
+```
+and reuse those in the second component. Do remember that Vue wants you do a top bottom approach so components at the top depend on the ones following them. And a new Vue instance follows at the end
