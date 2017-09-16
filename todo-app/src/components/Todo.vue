@@ -64,6 +64,9 @@ export default {
       // also see modal component where $emit is part of html tag attributes
       // emited here so the other component TodoList can handle it.
       this.$emit('delete-todo', todo)
+    },
+    completeTodo (todo) {
+      this.$emit('complete-todo', todo)
     }
   }
 }
