@@ -12,6 +12,10 @@
           <span class='right floated edit icon' v-on:click="showForm">
           <i class='edit icon'></i>
         </span>
+        <!-- /* add the trash icon in below the edit icon in the template */ -->
+    <span class='right floated trash icon' v-on:click="deleteTodo(todo)">
+      <i class='trash icon'></i>
+    </span>
       </div>
     </div>
     <!-- // form is visible when we are in editing mode -->
@@ -45,7 +49,7 @@ export default {
   props: ['todo'],
   data () {
     return {
-      isEditing: false
+      isEditing: false // default state
     }
   },
   methods: {
@@ -54,6 +58,12 @@ export default {
     },
     hideForm () {
       this.isEditing = false
+    },
+    deleteTodo (todo) {
+      // vm.$emit( event, […args] )
+      // also see modal component where $emit is part of html tag attributes
+      // emited here so the other component TodoList can handle it.
+      this.$emit('delete-todo', todo)
     }
   }
 }
