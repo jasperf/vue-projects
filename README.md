@@ -11,6 +11,7 @@ In this repository I put all the Vue projects I worked on using Laracasts.com an
 - Components - 101
 - Computed Properties & Caching
 - Event Listeners: v-on
+- To Do App
 - Twitter
 - Lists:v-for
 
@@ -82,6 +83,9 @@ document.querySelector('#button').addEventListener('click', () => {
 });
 ```
 This to show how event listeners are set up in Vue JS with a lot less code and way easier then using JavaScript or jQuery. The event listener is set up using the directive ```v-on:click``` . With it a method can be bound to it.
+
+## To Do App
+Todo app based on Jeremy Kithome's tutorial at Scotchbox [here](https://scotch.io/tutorials/build-a-to-do-app-with-vue-js-2)
 
 ## Twitter
 
