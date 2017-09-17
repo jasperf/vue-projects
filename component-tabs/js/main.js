@@ -25,7 +25,10 @@ Vue.component('tabs', {
 			</div>
 
 			<div class="tab-details">
-				<slot></slot> <!-- // to load the tabs content	-->
+				<slot></slot>
+				<!-- // to load the tabs content
+				// v-show only when tab header isActive
+				-->
 			</div>
 		</div> <!-- // needed to satisfy the one root element inside component -->
 		`,
@@ -66,11 +69,11 @@ Vue.component('tabs', {
 
 Vue.component('tab', { // was the missing "unknown custom element tab"
 	template: `
-		<div><slot></slot></div>
+		<div v-show="isActive"><slot></slot></div>
 	`,
 
 	props: {
-		name: {required: true},
+		name: {required: true },
 		// without the prop the looping through each name or title
 		// on index would fail as it is only known there and not in the
 		// component.
