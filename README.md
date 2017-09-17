@@ -99,6 +99,7 @@ $vm0.$children.forEach(tab => console.log(tab.name));
 ```
 can be confusing due to ES6 syntax for the uninitiated.
 **NB** Code has been commented extensively.
+
 ## Components with Message
 Working with a component here in more detail using the properties:prop, extended template details as well as a method to show or hide a message block. Directive used here to work with the method to hide the message is ```v-show```. Bulma is used here it being Jeffrey Way,'' favorite CSS framework.
 
@@ -116,8 +117,20 @@ document.querySelector('#button').addEventListener('click', () => {
 This to show how event listeners are set up in Vue JS with a lot less code and way easier then using JavaScript or jQuery. The event listener is set up using the directive ```v-on:click``` . With it a method can be bound to it.
 
 ## To Do App
-Todo app based on Jeremy Kithome's tutorial at Scotchbox [here](https://scotch.io/tutorials/build-a-to-do-app-with-vue-js-2)
-
+Todo app based on Jeremy Kithome's tutorial at Scotchbox [here](https://scotch.io/tutorials/build-a-to-do-app-with-vue-js-2). This app is made with the vue cli tool. You can install it using 
+```
+npm install --global vue-cli
+```
+Once installed you have the option to set up a 
+- Webpack app, 
+- webpack simple Webpack with Vue-loader,
+-  Browserify - Browserify plus Vue-ify with hot-reload,
+-  Browserify Simple - Borwserify + Vue-ify,
+-  Simple - Vue using a single HTML file
+For this app we use the full Webpack app:
+```
+vue init webpack todo-app
+```
 ## Twitter
 
 Twitter Tweet field in progress
