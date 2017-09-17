@@ -7,6 +7,7 @@ In this repository I put all the Vue projects I worked on using Laracasts.com an
 - Basic Data Binding: v-model
 - Component within Component
 - Component Modal
+- Component Tabs
 - Component with message
 - Components - 101
 - Computed Properties & Caching
@@ -68,6 +69,36 @@ Showing how you can reactively bind data to an input field using v-model as well
 
 This type of data binding using ```v-model``` is for input fields and text areas only. For binding of classes and styles ```v-bind``` is used.
 
+## Components within Components
+Basic example showing you how you can use html tags defined in one component:
+```
+<task v-for="task in tasks" :key="task.id">{{ task.task }}</task>
+```
+and reuse those in the second component. Do remember that Vue wants you do a top bottom approach so components at the top depend on the ones following them. And a new Vue instance follows at the end
+
+## Component Modal
+
+## Component Tabs
+
+Tougher chapter dealing with adding a tabbed structure. CSS is based on a Bulma component again. As for dealing with the tab headers, body and selected states several directives have been used:
+```
+v-modal
+v-bind or : 
+v-show
+v-on: or @click
+v-for (loops)
+```
+Issues you bump into is 
+- the fact that properties need to be immutable, 
+- that children within components need to be registered as properties to manipulate them, 
+- that custom tags in components not defined yet need a separate component or at least their own property (own component here).
+
+You will also see ES6 used here again and that something like
+```
+$vm0.$children.forEach(tab => console.log(tab.name));
+```
+can be confusing due to ES6 syntax for the uninitiated.
+**NB** Code has been commented extensively.
 ## Components with Message
 Working with a component here in more detail using the properties:prop, extended template details as well as a method to show or hide a message block. Directive used here to work with the method to hide the message is ```v-show```. Bulma is used here it being Jeffrey Way,'' favorite CSS framework.
 
@@ -105,9 +136,3 @@ This array is loaded onto the page using:
 ```
 The `{{}}` moustache curly braces are used here again to echo the actual name from the for loop.
 
-## Components within Components
-Basic example showing you how you can use html tags defined in one component:
-```
-<task v-for="task in tasks" :key="task.id">{{ task.task }}</task>
-```
-and reuse those in the second component. Do remember that Vue wants you do a top bottom approach so components at the top depend on the ones following them. And a new Vue instance follows at the end
