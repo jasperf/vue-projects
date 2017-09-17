@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css">
+	<style type="text/css" media="screen">
+		body {padding-top:40px;}
+	</style>
+</head>
+<body>
+<div id="root" class="container">
+	<!-- old setup
+		<ul id="tabs">
+		<li><a href="#about">About</a></li>
+		<li><a href="#">About Us</a></li>
+		<li><a href="#">About our Culture</a></li>
+	 </ul> 
+	 <div class="tab-panels">
+	 </div> -->
+	 <tabs>
+	 	<tab name="About Us" :selected="true">
+	 		<!-- $vm0.$children.forEach(tab => console.log(tab.name)); // will not work right away
+			because you need to set props in the tab component for the element name
+			Two, this is ES6 arrow syntax being used for the forEach for function tab
+			https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
+	 		-->
+	 		<h1>Here is the content for the About Us tab.</h1>
+	 	</tab>
+	 	
+	 	<tab name="About our Culture">
+	 		<h1>Here is the content for the About our Culture tab.</h1>
+	 	</tab>
+	 	
+	 	<tab name="About our Vision">
+	 		<h1>Here is the content for the About our Vision tab.</h1>
+	 	</tab>
+	 </tabs>
+</div>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script src="./js/main.js" type="text/javascript" charset="utf-8" async defer></script>
+
+</body>
+</html>
