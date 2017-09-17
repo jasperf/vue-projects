@@ -14,7 +14,7 @@ Vue.component('tabs', {
 			    // <li><a>Documents</a></li>
 			    -->
 			    <li v-for="tab in tabs" :class="{ 'is-active' : tab.isActive }">
-				    <a href="#" @click="selectTab(tab)">{{ tab.name }}</a>
+				    <a :href="tab.href" @click="selectTab(tab)">{{ tab.name }}</a>
 			    </li>
 			    <!-- // v-for to loop through the tab names 
 			    // also using :class for class binding briefly with if statement using second ':'
@@ -83,6 +83,15 @@ Vue.component('tab', { // was the missing "unknown custom element tab"
 	data () {
 		return {
 			isActive : false
+		}
+	},
+	computed: {
+		href () {
+			// return 'foobar'
+			return '#' + this.name.toLowerCase().replace(/ /g, '-') 
+			// '/ /' means search for empty space and 'g' globally and then replace
+			// it by 
+			// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 		}
 	},
 
