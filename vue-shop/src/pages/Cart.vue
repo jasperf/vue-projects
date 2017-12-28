@@ -1,4 +1,4 @@
-<!-- ./src/components/Home.vue -->
+<!-- ./src/pages/Cart.vue -->
 <template>
   <div>
     <div class="title">
@@ -6,12 +6,13 @@
     </div>
   </div>
 </template>
+
 <script>
   export default {
     name: 'home',
     data() {
       return {
-        msg: 'Welcome to Your Vue.js App',
+        msg: 'Welcome to the Cart Page',
       };
     },
   };
