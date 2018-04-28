@@ -7,8 +7,8 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "node-sass": "^4.7.2",
-    "nodemon": "^1.14.3"
+    "node-sass": "^4.9.0",
+    "nodemon": "^1.17.3"
   },
   "scripts": {
     "build": "babel src -d dist && node-sass --include-path scss scss/twitter.scss dist/twitter.css"
