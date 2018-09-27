@@ -23,6 +23,7 @@
     },
     methods: {
       addProduct(model) {
+        // eslint-disable-next-line
         console.log('model', model);
       },
     },
