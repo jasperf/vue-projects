@@ -1,19 +1,15 @@
 // routes/api/index.js
-import { Router } from 'express';
+const express                = require('express');
+const router                 = express.Router();
+const productController      = require('../../controllers/product')
+const manufacturerController = require('../../controllers/manufacturer')
 
-const router = Router();
+router.get('/manufacturers', manufacturerController.all);
 
-import { all, byId, create, update, remove } from '../../controllers/product';
+router.get('/products', productController.all);
+router.get('/products/:id', productController.byId);
+router.post('/products', productController.create);
+router.put('/products/:id', productController.update);
+router.delete('/products/:id', productController.remove);
 
-import { all as _all } from '../../controllers/manufacturer';
-
-
-router.get('/manufacturers', _all);
-
-router.get('/products', all);
-router.get('/products/:id', byId);
-router.post('/products', create);
-router.put('/products/:id', update);
-router.delete('/products/:id', remove);
-
-export default router; // need to double check it export all routes
+module.exports = router;

@@ -1,11 +1,8 @@
 // ./model/index.js
-// ES6 import instead of require
-import mongoose, { Schema as _Schema, model as _model } from 'mongoose';
-
-// split in multiple constants
-const Schema = _Schema;
-const model = _model.bind(mongoose);
-const ObjectId = _Schema.Types.ObjectId;
+const mongoose = require('mongoose');
+const Schema   = mongoose.Schema,
+      model    = mongoose.model.bind(mongoose),
+      ObjectId = mongoose.Schema.Types.ObjectId;
 
 const productSchema = Schema({
   id: ObjectId,
@@ -14,7 +11,7 @@ const productSchema = Schema({
   price: Number,
   description: String,
   // One to many relationship
-  manufacturer: { type: ObjectId, ref: 'Manufacturer' },
+  manufacturer: {type: ObjectId, ref: 'Manufacturer'}
 });
 
 const manufacturerSchema = Schema({
@@ -22,8 +19,7 @@ const manufacturerSchema = Schema({
   name: String,
 });
 
-const Product = model('Product', productSchema);
-const Manufacturer = model('Manufacturer', manufacturerSchema);
+const Product      = model('Product', productSchema);
+const Manufacturer = model('Manufacturer', manufacturerSchema)
 
-// to make models avalable to other parts of the project
-module.exports = { Product, Manufacturer };
+module.exports = {Product, Manufacturer};

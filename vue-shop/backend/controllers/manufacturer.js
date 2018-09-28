@@ -1,6 +1,5 @@
-// ./controllers/manufacturer.js
-import Model from '../model';
-
+// ./controllers/manufacturer
+const Model = require('../model');
 const {Product, Manufacturer} = Model;
 
 const manufacturerController = {
@@ -11,4 +10,4 @@ const manufacturerController = {
     }
 };
 
-export default manufacturerController;
+module.exports = manufacturerController;

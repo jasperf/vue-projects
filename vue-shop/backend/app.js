@@ -12,7 +12,14 @@ const users = require('./routes/users');
 
 const app = express();
 
-mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_URL}`);
+// mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_URL}`);
+mongoose.connect('mongodb://127.0.0.1:27017/store', { useNewUrlParser: true })
+// mongoose.connect('mongodb://user:user@127.0.0.1:27017/store', { useNewUrlParser: true })
+.then(() => console.log("MongoDB conected ..."))
+.catch((err) => {
+  console.log('Error on start: ' + err.stack);
+  process.exit(1);
+});
 
 app.all('/*', function (req, res, next) {
   // CORS headers
