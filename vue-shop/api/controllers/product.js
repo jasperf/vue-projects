@@ -1,5 +1,5 @@
 // ./controllers/product.js
-import Model from '../models';
+import Model from '../model';
 
 const { Product, Manufacturer } = Model;
 
