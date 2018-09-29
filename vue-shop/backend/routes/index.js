@@ -7,4 +7,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'App running' });
 });
 
+// router.get('/products', function(req, res, next) {
+//   res.render('api/index', { title: 'App running' });
+// });
+
 module.exports = router;
