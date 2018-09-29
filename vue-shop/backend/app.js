@@ -12,7 +12,9 @@ const users = require('./routes/users');
 
 const app = express();
 
+// setup with .env based vars
 // mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_URL}`);
+// current Homebrew Setup
 mongoose.connect('mongodb://127.0.0.1:27017/store', { useNewUrlParser: true })
 // mongoose.connect('mongodb://user:user@127.0.0.1:27017/store', { useNewUrlParser: true })
 .then(() => console.log("MongoDB conected ..."))

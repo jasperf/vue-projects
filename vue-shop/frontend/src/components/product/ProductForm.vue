@@ -92,7 +92,7 @@
     methods: {
       saveProduct() {
         // eslint-disable-next-line
-        console.log(this.fields.valid()); 
+        //console.log(this.fields.valid()); 
         this.$validator.validateAll().then(() => {
           this.$emit('save-product', this.model);
         }).catch(() => {
