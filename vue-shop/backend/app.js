@@ -52,6 +52,9 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/api/v1', api);
 
+const seeder = require('./routes/seeder/products');
+app.use('/seeder', seeder);
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   const err = new Error('Not Found');
